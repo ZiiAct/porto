@@ -1,0 +1,44 @@
+/* ==========================================
+   ANIMATIONS — Keyframes & Transitions
+   ========================================== */
+
+/* ── Fade In ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Fade Up ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Slide In from Right ── */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Preloader counter ── */
+@keyframes countUp {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Flicker (subtle, for labels) ── */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+/* ── Scale pulse for shapes ── */
+@keyframes scalePulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.02); }
+}
+
+/* ── Utility animation classes ── */
+.anim-fade-in  { animation: fadeIn  0.6s var(--ease-smooth) both; }
+.anim-fade-up  { animation: fadeUp  0.7s var(--ease-smooth) both; }
+.anim-slide-right { animation: slideInRight 0.6s var(--ease-smooth) both; }

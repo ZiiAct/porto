@@ -1,0 +1,63 @@
+/* ==========================================
+   ShapeMockup — Geometric placeholder shapes
+   Replace <ShapeMockup> with <img> later
+   ========================================== */
+
+.shape-mockup {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Shape variants */
+.shape-mockup--rect    { border-radius: 2px; }
+.shape-mockup--rounded { border-radius: 12px; }
+.shape-mockup--circle  { border-radius: 50%; }
+.shape-mockup--pill    { border-radius: 999px; }
+
+/* Color fills */
+.shape-mockup--lavender { background-color: #9DA0EA; }
+.shape-mockup--dark     { background-color: #1C1C1E; }
+.shape-mockup--stone    { background-color: #C8C5BC; }
+.shape-mockup--warm     { background-color: #D4C5B0; }
+.shape-mockup--smoke    { background-color: #DADADA; }
+.shape-mockup--charcoal { background-color: #3A3A3A; }
+.shape-mockup--sage     { background-color: #B0BFA8; }
+
+/* Inner cross-hatch "empty" visual */
+.shape-mockup__inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.3;
+}
+
+.shape-mockup__label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  user-select: none;
+}
+
+/* Hover shimmer */
+.shape-mockup::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 40%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 60%
+  );
+  background-size: 200% 200%;
+  transition: background-position 0.6s ease;
+}
+
+.shape-mockup:hover::after {
+  background-position: 100% 100%;
+}

@@ -1,0 +1,61 @@
+/* ==========================================
+   Home.jsx — Homepage styles
+   ========================================== */
+
+/* ── Outer container (clips horizontal overflow) ── */
+.home {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* ── Horizontal rail (moves on scroll) ── */
+.home__rail {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  will-change: transform;
+  /* transform driven by JS */
+}
+
+/* ── Minimap strip at top (thumbnail row) ── */
+.home__minimap {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: var(--sidebar-w);
+  height: 3px;
+  z-index: 40;
+  background: var(--border);
+}
+
+.home__minimap-progress {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+/* ── Annotations sidebar (ON/OFF labels, right) ── */
+.home__annotations {
+  position: fixed;
+  right: calc(var(--sidebar-w) + 4px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+  pointer-events: none;
+}
+
+.home__annotation-label {
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.6;
+  white-space: nowrap;
+}

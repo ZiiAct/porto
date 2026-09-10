@@ -1,0 +1,64 @@
+/* ==========================================
+   Blank pages — Work, About, Contact
+   Shared base styles
+   ========================================== */
+
+.blank-page {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-main);
+  overflow: hidden;
+}
+
+/* Big editorial title */
+.blank-page__title {
+  font-family: var(--font-serif);
+  font-size: clamp(80px, 14vw, 200px);
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  text-align: center;
+  user-select: none;
+}
+
+/* Italic year/tag */
+.blank-page__tag {
+  font-family: var(--font-script);
+  font-size: clamp(18px, 2.5vw, 32px);
+  color: var(--muted);
+  margin-top: 24px;
+}
+
+/* "Coming soon" / status label */
+.blank-page__status {
+  margin-top: 40px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 24px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Horizontal hairlines */
+.blank-page__lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blank-page__line {
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}

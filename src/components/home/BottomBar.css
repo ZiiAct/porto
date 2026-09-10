@@ -1,0 +1,80 @@
+/* ==========================================
+   BottomBar — Project info bar at bottom
+   ========================================== */
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: var(--sidebar-w);
+  right: var(--sidebar-w);
+  height: 48px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-top: 1px solid var(--border);
+  background: transparent;
+  pointer-events: none;
+}
+
+.bottom-bar__index {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.bottom-bar__center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottom-bar__play {
+  font-size: 8px;
+  color: var(--muted);
+}
+
+.bottom-bar__project-name {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+
+.bottom-bar__right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  pointer-events: all;
+}
+
+.bottom-bar__view-label {
+  font-family: var(--font-script);
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.bottom-bar__view-link {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  padding: 4px 0;
+  border-bottom: 1px solid var(--text-dark);
+  transition: opacity 0.2s ease;
+}
+
+.bottom-bar__view-link:hover {
+  opacity: 0.5;
+}
+
+/* Dot divider (like ▪ in reference) */
+.bottom-bar__dot {
+  font-size: 18px;
+  color: var(--muted);
+  line-height: 1;
+}
